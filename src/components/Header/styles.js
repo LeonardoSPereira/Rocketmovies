@@ -2,13 +2,13 @@ import styled from "styled-components";
 
 export const Container = styled.header`
     width: 100%;
-    height: 6.8rem;
+    height: 11.6rem;
     display: flex;
     gap: 6.4rem;
     align-items: center;
     justify-content: space-between;
     padding: 0 12.3rem;
-    border: 1px solid red;
+    border-bottom: 1px solid ${ ({theme}) => theme.colors.background_700 };   
 
     h1 {
         font-size: 2.4rem;
@@ -17,15 +17,34 @@ export const Container = styled.header`
     }
 
     .profile {
-
         display: flex;
         align-items: center;
+
+        .content {
+            text-align: right;
+            
+            p {
+                font-size: 1.6rem;
+                font-weight: 700;
+                color: ${ ({theme}) => theme.colors.white_900 };
+            }
+
+            a {
+                font-size: 1.4rem;
+                text-align: left;
+                color: ${ ({theme}) => theme.colors.background_600 };
+            }
+
+        }
+
 
         > img {
             width: 6.4rem;
             height: 6.4rem;
             border-radius: 50%;
-            margin-left: 0.9rem;
+            border: 1px solid;
+            border-color: ${ ({theme}) => theme.colors.background_700 };
+            margin-left: 0.9rem
         }
     }
 `;
