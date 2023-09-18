@@ -5,6 +5,7 @@ export const Container = styled.div`
     height: 100vh;
     overflow: hidden;
 
+
     .wrapper {
         padding: 0 12.3rem;
 
@@ -20,18 +21,47 @@ export const Container = styled.div`
                 font-weight: normal;
                 color: #fff;
             }
+
+            a {
+                height: 4.8rem;
+                display:flex;
+                padding: 1.6rem;
+                align-items: center;
+                gap: 0.8rem;
+                border-radius: 0.8rem;
+                background-color: ${ ({theme}) => theme.colors.pink };
+                color: ${ ({theme}) => theme.colors.background_800 };
+                font-size: 1.6rem;
+
+            }
         }
     
         > .movies {
             width: 100%;
-            max-height: 40rem;
+            max-height: 45rem;
             margin: 0 auto;
-            border: 1px solid red;
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 2.4rem;
             overflow-y: auto;
+            padding-right: 0.8rem;
+            scroll-behavior: smooth;
+
+            &::-webkit-scrollbar {
+                width: 0.8rem;
+                height: 9.6rem;
+                background-color: transparent;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: ${ ({theme}) => theme.colors.pink };
+                border-radius: 0.8rem;
+            }
+
+            scrollbar-width: thin;
+            scrollbar-color: ${({ theme }) => theme.colors.pink} transparent;
+            
         }
     }
     
