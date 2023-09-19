@@ -27,7 +27,7 @@ export const Container = styled.a`
         margin-bottom: 1.5rem;
     }
 
-    .tags {
+    footer {
         width: 100%;
         display: flex;
         align-items: center;

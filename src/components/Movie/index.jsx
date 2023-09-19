@@ -2,14 +2,14 @@ import { Container, Stars } from "./styles";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai"
 import { Tag } from "../Tag";
 
-export function Movie({title, rating, children, ...rest}) {
+export function Movie({data, ...rest}) {
     return (
-        <Container>
-            <h3>{title}</h3>
+        <Container {...rest}>
+            <h3>{data.title}</h3>
 
             {/* IDEIA PARA RENDERIZAR AS ESTRELAS: 
                 fazer um for, recebendo a nota do backend e renderizando de acordo com a nota. Não colocar a estrela so o contorno */}
-            <Stars rating={rating}>
+            <Stars rating={data.rating}>
                 <AiFillStar />
                 <AiFillStar />
                 <AiFillStar />
@@ -17,12 +17,16 @@ export function Movie({title, rating, children, ...rest}) {
                 <AiOutlineStar />
             </Stars>
 
-            <p>{children}</p>
+            <p>{data.text}</p>
             
-            <div className="tags">
-                <Tag title="Sci-fi"/>
-                <Tag title="espaço"/>
-            </div>
+            {
+                data.tags &&
+                <footer>
+                    {
+                        data.tags.map(tag => <Tag key={tag.id} title={tag.name} /> )
+                    }
+                </footer>
+            }
 
         </Container>
     )
