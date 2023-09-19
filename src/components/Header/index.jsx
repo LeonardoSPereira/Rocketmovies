@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Input } from "../Input";
 import { Container } from "./styles";
 
@@ -10,13 +11,13 @@ export function Header() {
                 placeholder="Pesquisar pelo título" 
             />
 
-            <div className="profile">
+            <Link to="/profile" className="profile">
                 <div className="content">
                     <p>Leonardo Pereira</p>
                     <a href="/">sair</a>
                 </div>
                 <img src="https://github.com/leonardospereira.png" alt="Logo usuário" />
-            </div>
+            </Link>
         </Container>
     )
 }

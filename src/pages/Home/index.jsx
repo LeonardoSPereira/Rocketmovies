@@ -3,6 +3,7 @@ import { Header } from "../../components/Header"
 import { Button } from "../../components/Button";
 import { FiPlus } from "react-icons/fi"
 import { Movie } from "../../components/Movie";
+import { Link } from "react-router-dom";
 
 export function Home() {
     return (
@@ -13,10 +14,10 @@ export function Home() {
 
                 <div className="content">
                     <h2>Meus Filmes</h2>
-                    <a href="/">
+                    <Link to="/new">
                         <FiPlus />
                         Adicionar filme
-                    </a>
+                    </Link>
                 </div>
 
                 <div className="movies">

@@ -25,8 +25,7 @@ export const Container = styled.div`
             outline: none;
         }
 
-        &:placeholder {
-            font-size: 1.4rem;
+        &::placeholder {
             color: ${ ({theme}) => theme.colors.background_600 };
         }
 

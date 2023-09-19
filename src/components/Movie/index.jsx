@@ -4,7 +4,7 @@ import { Tag } from "../Tag";
 
 export function Movie({data, ...rest}) {
     return (
-        <Container {...rest}>
+        <Container to="/details/5" {...rest}>
             <h3>{data.title}</h3>
 
             {/* IDEIA PARA RENDERIZAR AS ESTRELAS: 
