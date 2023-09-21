@@ -3,16 +3,15 @@ import { styled } from "styled-components";
 export const Container = styled.div`
     
     display: flex;
-    height: 56px;
+    height: 5.6rem;
 
     align-items: center;
     justify-content: center;
     background-color: ${ ({theme, $isnew}) => $isnew ? "transparent" : theme.colors.background_800 };
     color: ${ ({theme}) => theme.colors.white_900 };
-    border: ${ ({theme, $isnew}) => $isnew ? `2px dashed ${theme.colors.background_600    }` : "none" };
-    /* margin-bottom: 8px; */
-    border-radius: 10px;
-    padding-right: 16px;
+    border: ${ ({theme, $isnew}) => $isnew ? `2px dashed ${theme.colors.background_600}` : "none" };
+    border-radius: 1rem;
+    padding-right: 1.6rem;
 
     > button {
         border: none;
@@ -31,7 +30,7 @@ export const Container = styled.div`
 
     > input {
         width: 15rem;
-        padding: 12px;
+        padding: 1.2rem;
         font-size: 1.6rem;
         color: ${ ({theme}) => theme.colors.white_900 };
         background: transparent;
