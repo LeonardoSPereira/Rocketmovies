@@ -19,10 +19,10 @@ export const Container = styled.div`
 
 export const Content = styled.div`
     width: calc(100% - 24.6rem);
+    margin: 0 auto;
     max-height: 50rem;
     padding-right: 2.4rem;
     overflow-y: auto;
-    margin: 0 auto;
     scroll-behavior: smooth;
 
     .head {
