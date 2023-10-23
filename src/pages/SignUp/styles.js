@@ -9,7 +9,7 @@ export const Container = styled.div`
     justify-content: space-between;
 `;
 
-export const Form = styled.form`
+export const Form = styled.div`
     width: 50%;
     padding: 0 8rem;
     display: flex;
