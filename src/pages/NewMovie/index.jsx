@@ -49,8 +49,13 @@ export function NewMovie() {
                 </div>
 
                 <div className="button">
-                    <Button className="delete">Excluir filme</Button>
-                    <Button>Salvar alterações</Button>
+                    <Button 
+                        className="delete"
+                        title="Excluir filme"
+                    />
+                    <Button 
+                        title="Salvar alterações"
+                    />
                 </div>
 
 

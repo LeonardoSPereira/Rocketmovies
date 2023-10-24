@@ -22,23 +22,28 @@ export const Container = styled.header`
 
         .content {
             text-align: right;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
             
-            p {
+            a {
                 font-size: 1.6rem;
                 font-weight: 700;
                 color: ${ ({theme}) => theme.colors.white_900 };
             }
 
-            a {
+            button {
                 font-size: 1.4rem;
                 text-align: left;
                 color: ${ ({theme}) => theme.colors.background_600 };
+                background: transparent;
+                border: none;
             }
 
+            
         }
-
-
-        > img {
+        
+        img {
             width: 6.4rem;
             height: 6.4rem;
             border-radius: 50%;
@@ -46,5 +51,6 @@ export const Container = styled.header`
             border-color: ${ ({theme}) => theme.colors.background_700 };
             margin-left: 0.9rem
         }
+
     }
 `;
