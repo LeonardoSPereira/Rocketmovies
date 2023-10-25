@@ -57,6 +57,7 @@ export const Content = styled.div`
             height: 1.6rem;
             border-radius: 50%;
             border: 1px solid ${ ({theme}) => theme.colors.background_700 };
+            object-fit: cover;
         }
 
         p {
@@ -78,6 +79,7 @@ export const Content = styled.div`
         text-align: justify;
         font-size: 1.6rem;
         color: ${ ({theme}) => theme.colors.white_900 };
+        margin-bottom: 2rem;
     }
 
     &::-webkit-scrollbar {

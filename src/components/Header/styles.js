@@ -49,7 +49,8 @@ export const Container = styled.header`
             border-radius: 50%;
             border: 1px solid;
             border-color: ${ ({theme}) => theme.colors.background_700 };
-            margin-left: 0.9rem
+            margin-left: 0.9rem;
+            object-fit: cover;
         }
 
     }

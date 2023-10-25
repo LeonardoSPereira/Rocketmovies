@@ -99,8 +99,9 @@ export const Content = styled.form`
 
     .tags {
         width: 100%;
-        height: 8.8rem;
+        min-height: 8.8rem;
         display: flex;
+        flex-wrap: wrap;
         padding: 1.6rem;
         align-items: start;
         gap: 2.4rem;
@@ -116,14 +117,6 @@ export const Content = styled.form`
         align-items: center;
         gap: 4rem;
 
-        button:nth-child(1) {
-            background-color: ${ ({theme}) => theme.colors.gray_400 };
-            color: ${ ({theme}) => theme.colors.pink };
-
-            &:hover {
-                filter: brightness(1.3)
-            }
-        }
     }
 
     &::-webkit-scrollbar {
