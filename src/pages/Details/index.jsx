@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Container, Content } from "./styles";
 import { Header } from "../../components/Header";
 import { Tag } from "../../components/Tag";
@@ -5,9 +6,16 @@ import { Button } from "../../components/Button";
 import { FiArrowLeft, FiClock } from "react-icons/fi";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { useAuth } from "../../hooks/auth";
+import { api } from "../../services/api";
+import avatarPlaceholder from "../../assets/avatar_placeholder.svg";
 
 
 export function Details() {
+    const { user } = useAuth();
+
+    const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder;
+
     return (
         <Container>
             <Header />
@@ -28,8 +36,8 @@ export function Details() {
                 </div>
 
                 <div className="stats">
-                    <img src="https://github.com/leonardospereira.png" alt="User image" />
-                    <p>Por <span>Leonardo Pereira</span></p>
+                    <img src={avatarUrl} alt="User image" />
+                    <p>Por <span>{user.name}</span></p>
                     <FiClock />
                     <p><span>23/05/22</span> às <span>08:00</span></p>
                 </div>

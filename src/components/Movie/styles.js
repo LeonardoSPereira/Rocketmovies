@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
-export const Container = styled(Link)`
+export const Container = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -9,6 +8,7 @@ export const Container = styled(Link)`
     padding: 3.2rem;
     background-color: rgba(255, 133, 155, 0.05);
     border-radius: 1.6rem;
+    cursor: pointer;
     
 
     h3 {

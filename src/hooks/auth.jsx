@@ -65,6 +65,7 @@ export function AuthProvider({ children}) {
         }
     }
 
+
     useEffect(() => {
         const user = localStorage.getItem("@Rocketmovies:user");
         const token = localStorage.getItem("@Rocketmovies:token");
@@ -75,6 +76,7 @@ export function AuthProvider({ children}) {
         }
 
     }, [])
+
     return (
         <AuthContext.Provider value={{ 
             signIn,

@@ -7,8 +7,8 @@ import { api } from "../../services/api";
 import avatarPlaceholder from "../../assets/avatar_placeholder.svg";
 
 
-
 export function Header() {
+
     const { signOut, user } = useAuth();
     const navigate = useNavigate();
 
@@ -24,7 +24,7 @@ export function Header() {
             <h1>RocketMovies</h1>
 
             <Input
-                placeholder="Pesquisar pelo título" 
+                placeholder="Pesquisar pelo título"
             />
 
             <div className="profile">

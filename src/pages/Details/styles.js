@@ -64,6 +64,11 @@ export const Content = styled.div`
             text-align: justify;
             font-size: 1.6rem;
             color: ${ ({theme}) => theme.colors.white_900 };
+
+            span {
+                font-weight: 500;
+                color: ${ ({theme}) => theme.colors.white_800 };
+            }
         }
 
         svg {
