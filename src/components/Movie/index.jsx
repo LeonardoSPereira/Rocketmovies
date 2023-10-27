@@ -15,7 +15,7 @@ export function Movie({data, ...rest}) {
                     Array.from({ length: rating }, (_, index) => (
 
                         <AiFillStar 
-                            key={index} 
+                            key={String(index)} 
                         />
 
                     ))
@@ -26,7 +26,7 @@ export function Movie({data, ...rest}) {
                     Array.from({ length: 5 - rating }, (_, index) => (
 
                         <AiOutlineStar 
-                            key={index}
+                            key={String(index)} 
                         />
 
                     ))

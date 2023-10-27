@@ -49,7 +49,7 @@ export function NewMovie() {
             })
 
             alert("Filme salvo com sucesso!");
-            navigate("/");
+            navigate(-1);
 
         } catch (error) {
             if(error.response) {
@@ -64,7 +64,7 @@ export function NewMovie() {
         <Container>
             <Header />
 
-            <Link to="/">
+            <Link to={-1}>
                 <FiArrowLeft />
                 Voltar
             </Link>

@@ -22,14 +22,16 @@ export function Profile() {
     const [avatarFile, setAvatarFile] = useState(null);
 
     async function handleUpdateProfile() {
-        const user = {
+        const updated = {
             name,
             email, 
             password: newPassword,
             old_password: oldPassword
         }
 
-        await updateProfile({ user, avatarFile });
+        const updatedUser = Object.assign(user, updated);
+
+        await updateProfile({ user: updatedUser, avatarFile });
     }
 
     function handleAvatarChange(e) {
@@ -44,7 +46,7 @@ export function Profile() {
         <Container>
 
             <div className="header">
-                <Link to="/">
+                <Link to={-1}>
                     <FiArrowLeft />
                     Voltar
                 </Link>

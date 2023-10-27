@@ -4,16 +4,20 @@ export const Container = styled.div`
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    
-    > a {
-        display: flex;
-        align-items: center;
-        gap: 0.8rem;
-        padding: 4rem 12.3rem 0;
-        font-size: 1.6rem;
-        color: ${ ({theme}) => theme.colors.pink };
-        margin-bottom: 2.4rem;
+
+    main {
+
+        > a {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 4rem 12.3rem 0;
+            font-size: 1.6rem;
+            color: ${ ({theme}) => theme.colors.pink };
+            margin-bottom: 2.4rem;
+        }
     }
+    
 
 `;
 
