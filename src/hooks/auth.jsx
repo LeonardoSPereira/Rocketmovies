@@ -9,15 +9,12 @@ export function AuthProvider({ children}) {
     async function signIn({ email, password }) {
 
         try {
-            const response = await api.post('/sessions', { email, password });
-            const { user, token } = response.data;
+            const response = await api.post('/sessions', { email, password }, { withCredentials: true });
+            const { user } = response.data;
 
             localStorage.setItem("@Rocketmovies:user", JSON.stringify(user));
-            localStorage.setItem("@Rocketmovies:token", token);
 
-            api.defaults.headers.common["Authorization"] = `Bearer ${token}`;
-
-            setData({ user, token });
+            setData({ user });
 
         } catch (error) {
 
@@ -32,7 +29,6 @@ export function AuthProvider({ children}) {
 
     function signOut() {
         localStorage.removeItem("@Rocketmovies:user");
-        localStorage.removeItem("@Rocketmovies:token");
 
         setData({});
     }
@@ -68,11 +64,9 @@ export function AuthProvider({ children}) {
 
     useEffect(() => {
         const user = localStorage.getItem("@Rocketmovies:user");
-        const token = localStorage.getItem("@Rocketmovies:token");
 
-        if(user && token) {
-            api.defaults.headers.common["Authorization"] = `Bearer ${token}`;
-            setData({ user: JSON.parse(user), token });
+        if(user) {
+            setData({ user: JSON.parse(user) });
         }
 
     }, [])
