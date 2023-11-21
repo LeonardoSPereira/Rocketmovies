@@ -25,7 +25,7 @@
 - [Tecnologias](#built_using_pt)
 
 ## 🧐 Sobre <a name = "about_pt"></a>
-Este projeto foi criado durante o curso Exporer da Rocketseat, com o obejtivo de listar os seus filmes favoritos, podendo dar a cada um deles uma nota de 0 a 5 e uma descrição ou avaliação da sua escolha.
+Este projeto foi criado durante o curso Exporer da Rocketseat, com o objetivo de listar os seus filmes favoritos, podendo dar a cada um deles uma nota de 0 a 5 e uma descrição ou avaliação da sua escolha.
 
 ## 🏁 Iniciando o projeto <a name = "getting_started_pt"></a>
 
